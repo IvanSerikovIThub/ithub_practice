@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+<img style="width: 300px;" src="/media/{{book.image}}" alt="">
+<h1>Заголовок книги: {{book.name}}</h1>
+<p>Автор книги: {{book.author}}</p>
+<p>Количетво книг: {{book.amount}}</p>
+
+{% endblock content %}

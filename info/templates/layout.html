@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <img class="w-100" style="width: 200px" src="{% static 'assets/img/logo.webp' %}" alt="">
+                </div>
+                <div class="col-8">
+                    <nav class="flex">
+                        <a href="{% url 'catalog_book' %}">Каталог</a>
+                        <a href="{% url 'add_book' %}">Добавить книгу</a>
+                    </nav>
+                </div>
+            </div>
+            
+        </div>
+   
+    </header>
+
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+
+    <footer>
+        Какой-то подвал
+    </footer>
+
+
+
+
+    <script src="{% static 'assets/js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>
